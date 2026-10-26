@@ -12,7 +12,7 @@
       "minAppVersion": 1
     },
     {
-      "level": 5,
+      "level": 4,
       "version": 1,
       "url": "case-005.json",
       "sha256": "",
@@ -21,7 +21,7 @@
       "minAppVersion": 1
     },
     {
-      "level": 6,
+      "level": 4,
       "version": 1,
       "url": "case-006.json",
       "sha256": "",
