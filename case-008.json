@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "id": "case-008",
+  "difficulty": "beginner",
+  "depth": 2,
+  "title": { "ar": "جريمة في المدرسة القديمة", "en": "Murder at the Old School" },
+  "intro": {
+    "ar": "عُثر على مدير المدرسة الأستاذ الطاهر مقتولًا بعد انتهاء الدوام! اشتبه المحقق بثلاثة أشخاص بقوا في المدرسة، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
+    "en": "School principal Mr. Tahar was found dead after the school day ended! The detective suspects three people who stayed behind. Use the clues to determine the killer, location, and weapon."
+  },
+  "suspects": [
+    { "id": "s1", "name": { "ar": "الأستاذة سعاد" }, "desc": { "ar": "معلّمة الرياضيات، تعدّ كل شيء حتى خطوات الطلاب." }, "facts": { "ar": "أيمن • عيناها عسليّتان" }, "attrs": { "hand": "right", "eyes": "hazel" } },
+    { "id": "s2", "name": { "ar": "الأستاذ كمال" }, "desc": { "ar": "معلّم الرياضة، صوته يُسمع من آخر الساحة." }, "facts": { "ar": "أيمن • عيناه بنيّتان" }, "attrs": { "hand": "right", "eyes": "brown" } },
+    { "id": "s3", "name": { "ar": "السيد حسّان" }, "desc": { "ar": "عامل النظافة، يعرف كل الأبواب ولا يتكلّم كثيرًا." }, "facts": { "ar": "أعسر • عيناه خضراوان" }, "attrs": { "hand": "left", "eyes": "green" } }
+  ],
+  "locations": [
+    { "id": "l1", "name": { "ar": "ساحة المدرسة" }, "desc": { "ar": "ساحة واسعة تتوسّطها شجرة حور قديمة." }, "tags": ["outdoors"] },
+    { "id": "l2", "name": { "ar": "غرفة الأساتذة" }, "desc": { "ar": "غرفة هادئة فيها طاولة طويلة وأكواب الشاي." }, "tags": ["indoors"] },
+    { "id": "l3", "name": { "ar": "المخبر" }, "desc": { "ar": "غرفة مليئة بالأنابيب الزجاجية والرفوف الباردة." }, "tags": ["indoors"] }
+  ],
+  "weapons": [
+    { "id": "w1", "name": { "ar": "مجسّم الكرة الأرضية" }, "desc": { "ar": "مجسّم ثقيل على قاعدة حديدية صلبة." }, "tags": ["heavy"] },
+    { "id": "w2", "name": { "ar": "المسطرة المعدنية" }, "desc": { "ar": "مسطرة طويلة بحافة حادّة." }, "tags": ["light"] },
+    { "id": "w3", "name": { "ar": "حبل القفز" }, "desc": { "ar": "حبل رياضي رفيع ومتين." }, "tags": ["light"] }
+  ],
+  "clues": [
+    { "type": "attribute", "id": "c1", "text": { "ar": "كل من كان في ساحة المدرسة يكتب بيده اليسرى." }, "target": "l1", "attr": "hand", "value": "left" },
+    { "type": "attribute", "id": "c2", "text": { "ar": "كل من كان في المخبر عيناه عسليّتان." }, "target": "l3", "attr": "eyes", "value": "hazel" },
+    { "type": "attribute", "id": "c3", "text": { "ar": "صاحب مجسّم الكرة الأرضية له عينان بنيّتان." }, "target": "w1", "attr": "eyes", "value": "brown" },
+    { "type": "attribute", "id": "c4", "text": { "ar": "صاحب حبل القفز يكتب بيده اليمنى." }, "target": "w3", "attr": "hand", "value": "right" }
+  ],
+  "murderClue": { "type": "murder", "id": "c5", "text": { "ar": "كانت أحذية الجثة مغطّاة بتراب الساحة وأوراق الحور الجافة." }, "pointsTo": "l1" },
+  "solution": { "murderer": "s3", "location": "l1", "weapon": "w2" }
+}
