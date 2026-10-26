@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "id": "case-005",
+  "difficulty": "intermediate",
+  "depth": 3,
+  "title": { "ar": "جريمة في ميناء الصيد", "en": "Murder at the Fishing Harbor" },
+  "intro": {
+    "ar": "عُثر على صاحب أكبر قارب في الميناء، الريّس سالم، مقتولًا عند الفجر! اشتبه المحقق بأربعة أشخاص كانوا في الميناء تلك الليلة، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
+    "en": "Captain Salem, owner of the harbor's biggest boat, was found dead at dawn! The detective suspects four people who were at the harbor that night. Use the clues to determine the killer, location, and weapon."
+  },
+  "suspects": [
+    { "id": "s1", "name": { "ar": "العمّ منجي" }, "desc": { "ar": "صيّاد عجوز، يقرأ البحر كما يقرأ الناس الكتاب." }, "facts": { "ar": "أيمن • عيناه زرقاوان" }, "attrs": { "hand": "right", "eyes": "blue" } },
+    { "id": "s2", "name": { "ar": "السيدة زهرة" }, "desc": { "ar": "بائعة السمك الأشهر، صوتها يسبق خطاها." }, "facts": { "ar": "أعسر • عيناها بنيّتان" }, "attrs": { "hand": "left", "eyes": "brown" } },
+    { "id": "s3", "name": { "ar": "الأستاذ نبيل" }, "desc": { "ar": "مفتّش الميناء، لا يفوته رقم ولا ختم." }, "facts": { "ar": "أيمن • عيناه خضراوان" }, "attrs": { "hand": "right", "eyes": "green" } },
+    { "id": "s4", "name": { "ar": "سناء" }, "desc": { "ar": "عاملة في ورشة الشباك، أصابعها لا تخطئ عقدة." }, "facts": { "ar": "أيمن • عيناها عسليّتان" }, "attrs": { "hand": "right", "eyes": "hazel" } }
+  ],
+  "locations": [
+    { "id": "l1", "name": { "ar": "رصيف الميناء" }, "desc": { "ar": "رصيف طويل تعلوه رائحة الملح وصياح النوارس." }, "tags": ["outdoors"] },
+    { "id": "l2", "name": { "ar": "سوق السمك" }, "desc": { "ar": "سوق مسقوف تتلألأ فيه الأسماك على الثلج." }, "tags": ["indoors"] },
+    { "id": "l3", "name": { "ar": "ورشة الشباك" }, "desc": { "ar": "ورشة مظلمة تتدلّى من سقفها شباك الصيد." }, "tags": ["indoors"] },
+    { "id": "l4", "name": { "ar": "قارب الصيد" }, "desc": { "ar": "قارب خشبي أزرق يتأرجح مع الموج." }, "tags": ["outdoors"] }
+  ],
+  "weapons": [
+    { "id": "w1", "name": { "ar": "المجداف الخشبي" }, "desc": { "ar": "طويل وثقيل، ضربة واحدة منه كافية." }, "tags": ["heavy"] },
+    { "id": "w2", "name": { "ar": "مدية تنظيف السمك" }, "desc": { "ar": "نصل قصير حادّ يلمع تحت الضوء." }, "tags": ["light"] },
+    { "id": "w3", "name": { "ar": "حبل المرساة" }, "desc": { "ar": "حبل غليظ وثقيل يشدّ القوارب إلى الرصيف." }, "tags": ["heavy"] },
+    { "id": "w4", "name": { "ar": "خطّاف الصيد" }, "desc": { "ar": "خطّاف معدني صغير مدبّب." }, "tags": ["light"] }
+  ],
+  "clues": [
+    { "type": "not_same", "id": "c1", "text": { "ar": "سناء لم تكن في رصيف الميناء." }, "a": "s4", "b": "l1" },
+    { "type": "attribute", "id": "c2", "text": { "ar": "صاحب مدية تنظيف السمك له عينان خضراوان." }, "target": "w2", "attr": "eyes", "value": "green" },
+    { "type": "not_same", "id": "c3", "text": { "ar": "العمّ منجي لم يكن في قارب الصيد." }, "a": "s1", "b": "l4" },
+    { "type": "attribute", "id": "c4", "text": { "ar": "صاحب المجداف الخشبي يكتب بيده اليمنى." }, "target": "w1", "attr": "hand", "value": "right" },
+    { "type": "attribute", "id": "c5", "text": { "ar": "صاحب حبل المرساة له عينان زرقاوان." }, "target": "w3", "attr": "eyes", "value": "blue" },
+    { "type": "not_same", "id": "c6", "text": { "ar": "سناء لم تكن في قارب الصيد." }, "a": "s4", "b": "l4" },
+    { "type": "attribute", "id": "c7", "text": { "ar": "كل من كان في سوق السمك يكتب بيده اليسرى." }, "target": "l2", "attr": "hand", "value": "left" }
+  ],
+  "murderClue": { "type": "murder", "id": "c8", "text": { "ar": "التفّت حول الجثة خيوط شباك قديمة." }, "pointsTo": "l3" },
+  "solution": { "murderer": "s4", "location": "l3", "weapon": "w1" }
+}

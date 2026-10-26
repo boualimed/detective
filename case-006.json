@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "id": "case-006",
+  "difficulty": "intermediate",
+  "depth": 3,
+  "title": { "ar": "جريمة في مزرعة التين", "en": "Murder at the Fig Farm" },
+  "intro": {
+    "ar": "عُثر على صاحب المزرعة الحاج عمر مقتولًا في موسم قطاف التين! اشتبه المحقق بأربعة أشخاص كانوا في المزرعة ذلك المساء، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
+    "en": "Farm owner Hajj Omar was found dead during the fig harvest! The detective suspects four people who were on the farm that evening. Use the clues to determine the killer, location, and weapon."
+  },
+  "suspects": [
+    { "id": "s1", "name": { "ar": "ريم" }, "desc": { "ar": "عاملة موسمية سريعة اليدين، تقطف التين قبل شروق الشمس." }, "facts": { "ar": "أعسر • عيناها بنيّتان" }, "attrs": { "hand": "left", "eyes": "brown" } },
+    { "id": "s2", "name": { "ar": "الأستاذ حمزة" }, "desc": { "ar": "مهندس زراعي يحمل دفترًا مليئًا بالأرقام." }, "facts": { "ar": "أيمن • عيناه خضراوان" }, "attrs": { "hand": "right", "eyes": "green" } },
+    { "id": "s3", "name": { "ar": "السمسار فتحي" }, "desc": { "ar": "سمسار محاصيل يبتسم كثيرًا ويعدّ أكثر." }, "facts": { "ar": "أعسر • عيناه عسليّتان" }, "attrs": { "hand": "left", "eyes": "hazel" } },
+    { "id": "s4", "name": { "ar": "نعيمة" }, "desc": { "ar": "جارة المزرعة، تعرف كل ما يجري خلف السور." }, "facts": { "ar": "أيمن • عيناها زرقاوان" }, "attrs": { "hand": "right", "eyes": "blue" } }
+  ],
+  "locations": [
+    { "id": "l1", "name": { "ar": "حقل التين" }, "desc": { "ar": "صفوف طويلة من أشجار التين المثقلة بالثمار." }, "tags": ["outdoors"] },
+    { "id": "l2", "name": { "ar": "بيدر التجفيف" }, "desc": { "ar": "ساحة واسعة تُنشر فيها ثمار التين لتجفّ تحت الشمس." }, "tags": ["outdoors"] },
+    { "id": "l3", "name": { "ar": "المخزن" }, "desc": { "ar": "غرفة مظلّلة تفوح منها رائحة التين المجفّف." }, "tags": ["indoors"] },
+    { "id": "l4", "name": { "ar": "كوخ الحارس" }, "desc": { "ar": "كوخ صغير بسقف من القصب وسرير خشبي." }, "tags": ["indoors"] }
+  ],
+  "weapons": [
+    { "id": "w1", "name": { "ar": "المنجل" }, "desc": { "ar": "هلال حادّ يُستعمل في حصاد الأعشاب." }, "tags": ["light"] },
+    { "id": "w2", "name": { "ar": "المعول" }, "desc": { "ar": "أداة ثقيلة لحفر التربة حول الجذور." }, "tags": ["heavy"] },
+    { "id": "w3", "name": { "ar": "سلّم القطاف الخشبي" }, "desc": { "ar": "سلّم ثقيل طويل يُسند إلى الأشجار العالية." }, "tags": ["heavy"] },
+    { "id": "w4", "name": { "ar": "حبل الدلو" }, "desc": { "ar": "حبل متين يُستعمل في رفع الماء من البئر." }, "tags": ["light"] }
+  ],
+  "clues": [
+    { "type": "not_same", "id": "c1", "text": { "ar": "ريم لم تكن في بيدر التجفيف." }, "a": "s1", "b": "l2" },
+    { "type": "attribute", "id": "c2", "text": { "ar": "صاحب المنجل له عينان زرقاوان." }, "target": "w1", "attr": "eyes", "value": "blue" },
+    { "type": "attribute", "id": "c3", "text": { "ar": "صاحب المعول له عينان بنيّتان." }, "target": "w2", "attr": "eyes", "value": "brown" },
+    { "type": "attribute", "id": "c4", "text": { "ar": "كل من كان في المخزن يكتب بيده اليمنى." }, "target": "l3", "attr": "hand", "value": "right" },
+    { "type": "attribute", "id": "c5", "text": { "ar": "كل من كان في حقل التين يكتب بيده اليمنى." }, "target": "l1", "attr": "hand", "value": "right" },
+    { "type": "not_same", "id": "c6", "text": { "ar": "نعيمة لم تكن في المخزن." }, "a": "s4", "b": "l3" },
+    { "type": "attribute", "id": "c7", "text": { "ar": "صاحب حبل الدلو يكتب بيده اليسرى." }, "target": "w4", "attr": "hand", "value": "left" }
+  ],
+  "murderClue": { "type": "murder", "id": "c8", "text": { "ar": "كان بجوار الجثة مصباح زيت منطفئ وبطانية صوفية." }, "pointsTo": "l4" },
+  "solution": { "murderer": "s1", "location": "l4", "weapon": "w2" }
+}
