@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "packs": [
+    {
+      "level": 4,
+      "version": 1,
+      "url": "level-4-cases-004-006.json",
+      "sha256": "",
+      "sizeBytes": 0,
+      "caseCount": 3,
+      "minAppVersion": 1
+    }
+  ]
+}
