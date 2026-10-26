@@ -12,6 +12,7 @@
         "ar": "جريمة في المتحف العتيق",
         "en": "Murder at the Ancient Museum"
       },
+      "image": "https://raw.githubusercontent.com/boualimed/detective/main/images/museum.jfif",
       "intro": {
         "ar": "عُثر على مدير المتحف الدكتور عادل مقتولًا بعد إغلاق الأبواب! اشتبه المحقق بأربعة أشخاص كانوا داخل المبنى وحديقته، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
         "en": "Museum director Dr. Adel was found dead after the doors were locked! The detective suspects four people who were inside the building and its garden. Use the clues to determine the killer, location, and weapon."
@@ -266,6 +267,7 @@
         "ar": "جريمة في ميناء الصيد",
         "en": "Murder at the Fishing Harbor"
       },
+      "image": "https://raw.githubusercontent.com/boualimed/detective/main/images/harber.jfif",
       "intro": {
         "ar": "عُثر على صاحب أكبر قارب في الميناء، الريّس سالم، مقتولًا عند الفجر! اشتبه المحقق بأربعة أشخاص كانوا في الميناء تلك الليلة، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
         "en": "Captain Salem, owner of the harbor's biggest boat, was found dead at dawn! The detective suspects four people who were at the harbor that night. Use the clues to determine the killer, location, and weapon."
@@ -528,6 +530,7 @@
         "ar": "جريمة في مزرعة التين",
         "en": "Murder at the Fig Farm"
       },
+      "image": "https://raw.githubusercontent.com/boualimed/detective/main/images/farm.jfif",
       "intro": {
         "ar": "عُثر على صاحب المزرعة الحاج عمر مقتولًا في موسم قطاف التين! اشتبه المحقق بأربعة أشخاص كانوا في المزرعة ذلك المساء، وعليك باستخدام الأدلة تحديد القاتل ومكان الجريمة وسلاح الجريمة.",
         "en": "Farm owner Hajj Omar was found dead during the fig harvest! The detective suspects four people who were on the farm that evening. Use the clues to determine the killer, location, and weapon."
